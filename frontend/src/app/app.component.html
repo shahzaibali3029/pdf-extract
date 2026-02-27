@@ -1,0 +1,39 @@
+<!-- Toast notifications -->
+<app-toast-container></app-toast-container>
+
+<!-- Background decorations -->
+<div class="bg-decor">
+  <div class="orb orb--1"></div>
+  <div class="orb orb--2"></div>
+  <div class="orb orb--3"></div>
+</div>
+
+<!-- Main content -->
+<main class="main-container">
+  <!-- Branding -->
+  <header class="header" style="animation: fade-in-up 0.4s ease-out forwards">
+    <div class="header-brand">
+      <div class="logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#818cf8" viewBox="0 0 24 24"
+          stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+        </svg>
+      </div>
+      <h1 class="header-title">
+        <span class="text-white">PDF</span><span class="text-brand">Extract</span>
+      </h1>
+    </div>
+    <p class="header-subtitle">
+      Extract every image from your PDF documents in seconds
+    </p>
+  </header>
+
+  <!-- Upload Card -->
+  <app-upload></app-upload>
+
+  <!-- Footer -->
+  <footer class="footer" style="animation: fade-in-up 0.8s ease-out forwards">
+    <p>&copy; {{ currentYear }} PDFExtract &middot; Files are processed in-memory and never stored</p>
+  </footer>
+</main>

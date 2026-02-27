@@ -1,0 +1,231 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Background Decorations ──────────────────────────────── */
+.bg-decor {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+}
+
+.orb--1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #6366f1, transparent);
+    top: -10%;
+    right: -8%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.orb--2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #8b5cf6, transparent);
+    bottom: -5%;
+    left: -5%;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+.orb--3 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #ec4899, transparent);
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.08;
+    animation: float 12s ease-in-out infinite;
+}
+
+/* ── Main Container ──────────────────────────────────────── */
+.main-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.logo-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.12));
+    border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.header-title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-brand {
+    color: #818cf8;
+}
+
+.header-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+    max-width: 20rem;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.footer {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.75rem;
+    color: #475569;
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* Responsive — Tablet (≤768px)                                */
+/* ═══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1.5rem 1rem;
+        justify-content: flex-start;
+        padding-top: 3rem;
+    }
+
+    .header {
+        margin-bottom: 1.5rem;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.8125rem;
+    }
+
+    .orb--1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orb--2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .orb--3 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .footer {
+        margin-top: 2rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* Responsive — Mobile (≤480px)                                */
+/* ═══════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 1.25rem 0.75rem;
+        padding-top: 2rem;
+    }
+
+    .header {
+        margin-bottom: 1.25rem;
+    }
+
+    .header-brand {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .logo-icon {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 0.625rem;
+    }
+
+    .logo-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .header-title {
+        font-size: 1.375rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.75rem;
+        max-width: 16rem;
+    }
+
+    .orb--1 {
+        width: 200px;
+        height: 200px;
+        filter: blur(60px);
+    }
+
+    .orb--2 {
+        width: 180px;
+        height: 180px;
+        filter: blur(60px);
+    }
+
+    .orb--3 {
+        width: 120px;
+        height: 120px;
+        filter: blur(50px);
+    }
+
+    .footer {
+        margin-top: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 0.6875rem;
+        padding: 0 0.5rem;
+    }
+}

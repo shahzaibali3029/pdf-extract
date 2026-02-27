@@ -1,0 +1,9 @@
+venv/
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+node_modules/
+dist/
+.angular/
+.vscode/
